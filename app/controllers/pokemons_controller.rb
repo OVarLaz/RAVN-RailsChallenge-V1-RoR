@@ -3,6 +3,7 @@ class PokemonsController < ApplicationController
 
   def index
     @pokemons = Pokemon.all
+    authorize @pokemons
   end
 
   def show; end

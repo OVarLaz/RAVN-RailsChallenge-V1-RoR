@@ -73,3 +73,5 @@ gem "rubocop", "~> 1.56"
 gem "pg", "~> 1.5"
 
 gem "devise", "~> 4.9"
+
+gem "pundit", "~> 2.3"
