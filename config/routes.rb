@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/index'
   devise_for :users
 
   # get '/pokemons', to: 'pokemons#index'
@@ -8,4 +7,5 @@ Rails.application.routes.draw do
   # root 'pokemons#index'
 
   resources :pokemons
+  resources :users
 end
