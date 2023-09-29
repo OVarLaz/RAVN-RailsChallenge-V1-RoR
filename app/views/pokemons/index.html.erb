@@ -1,0 +1,19 @@
+<h1>Pokemons</h1>
+
+<%= link_to "Add Pokemon", new_pokemon_path %>
+
+<table>
+  <tr>
+    <th>i</th>
+    <th>Pokemon</th>
+    <th>Type</th>
+  </tr>
+    <% @pokemons.each do |pokemon| %>
+  <tr>
+    
+    <td><%= pokemon.id %></td>
+    <td><%= link_to pokemon.name, pokemon %></td>
+    <td><%= pokemon.element_type %></td>
+  </tr>
+  <% end %>
+  </table>

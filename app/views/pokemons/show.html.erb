@@ -1,0 +1,14 @@
+<h1><%= @pokemon.name %></h1>
+
+
+
+<p><%= @pokemon.description %></p>
+
+
+<ul>
+  <li><%= link_to "Edit", edit_pokemon_path(@pokemon) %></li>
+  <li><%= link_to "Destroy", pokemon_path(@pokemon), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
