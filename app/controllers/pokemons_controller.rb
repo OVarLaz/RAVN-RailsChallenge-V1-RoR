@@ -34,13 +34,13 @@ class PokemonsController < ApplicationController
   def destroy
     @pokemon.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to pokemons_path, status: :see_other
   end
 
   private
 
   def pokemon_params
-    params.require(:pokemon).permit(:title, :body, :status)
+    params.require(:pokemon).permit(:name, :image, :main_technique, :element_type, :description)
   end
 
   def find_by_id
