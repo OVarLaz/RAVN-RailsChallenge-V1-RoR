@@ -19,6 +19,11 @@
 
 
   <div>
+    <%= form.label :main_technique %><br>
+    <%= form.text_field :main_technique %>
+  </div>
+
+  <div>
     <%= form.label :description %><br>
     <%= form.text_area :description %><br>
     <% pokemon.errors.full_messages_for(:description).each do |message| %>

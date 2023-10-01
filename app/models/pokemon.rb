@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Pokemon < ApplicationRecord
   enum element_type: {
     Normal: 0,

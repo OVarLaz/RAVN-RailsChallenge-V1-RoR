@@ -75,3 +75,5 @@ gem "pg", "~> 1.5"
 gem "devise", "~> 4.9"
 
 gem "pundit", "~> 2.3"
+
+gem "tailwindcss-rails", "~> 2.0"
