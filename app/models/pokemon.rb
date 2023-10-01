@@ -21,4 +21,7 @@ class Pokemon < ApplicationRecord
     Steel: 16,
     Fairy: 17
   }
+
+  has_many :user_pokemons
+  has_many :users, through: :user_pokemons
 end

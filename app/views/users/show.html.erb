@@ -2,6 +2,15 @@
 
 
 <ul>
+  <% @user_pokemons.each do |user_pokemon| %>
+      <li>
+        <%=  user_pokemon.name%>
+      </li>
+  <% end %>
+</ul>
+
+
+<ul>
   <li><%= link_to "Edit", edit_user_path(@user) %></li>
   <li><%= link_to "Destroy", user_path(@user), data: {
                     turbo_method: :delete,

@@ -7,4 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   enum role: { admin: 0, trainer: 1 }
+
+  has_many :user_pokemons
+  has_many :pokemons, through: :user_pokemons
 end

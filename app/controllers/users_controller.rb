@@ -5,7 +5,13 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show; end
+  def show
+    @user_pokemons = @user.pokemons
+  end
+
+  def show_pokemons
+    @user_pokemons = @user.pokemons
+  end
 
   def new
     @user = User.new
