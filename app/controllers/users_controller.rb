@@ -44,6 +44,20 @@ class UsersController < ApplicationController
     redirect_to users_path, status: :see_other
   end
 
+  def my_pokemons; end
+
+  def remove_pokemon
+    current_user.remove_pokemon(id: params[:pokemon_id])
+
+    redirect_to my_pokemons_path, status: :see_other
+  end
+
+  def add_pokemon
+    current_user.add_pokemon(new_pokemon_id: params[:pokemon_id])
+
+    redirect_to my_pokemons_path, status: :see_other
+  end
+
   private
 
   def user_params

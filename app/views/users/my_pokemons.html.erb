@@ -1,0 +1,28 @@
+<h1>My pokemons</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Caught Date</th>
+        <th>Remove</th>
+    </tr>
+    <% current_user.pokemons.each do |pokemon| %>
+        <tr>
+            <td><%= pokemon.name %></td>
+            <td><%= pokemon.created_at %></td>
+            <td><%= button_to "-", remove_pokemon_path, params: {pokemon_id: pokemon.id}, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></td>
+        </tr>
+    <% end %>
+</table>
+
+<div>
+    <% Pokemon.all.each do |pokemon| %>
+        <li>
+            <%= pokemon.name%>
+        </li>
+        <%= button_to "add pokemon", add_pokemon_path, params: {pokemon_id: pokemon.id} %>
+    <% end %>
+</div>

@@ -14,4 +14,12 @@ class User < ApplicationRecord
   def recent_pokemons
     pokemons.where('user_pokemons.created_at < ?', Time.now - 7.days)
   end
+
+  def remove_pokemon(id:)
+    user_pokemons.where(pokemon_id: id).first.destroy
+  end
+
+  def add_pokemon(new_pokemon_id:)
+    UserPokemon.create(user_id: id, pokemon_id: new_pokemon_id)
+  end
 end
