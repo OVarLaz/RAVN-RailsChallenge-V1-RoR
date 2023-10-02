@@ -12,8 +12,16 @@
   </head>
 
   <body class="bg-green-200">
-    <main class="container mx-auto mt-28 px-5 flex flex-col	">
-      <%= yield %>
-    </main>
+    
+    <%= render "header" %>
+    
+    <div class="flex flex-grow">
+
+         <%= render "navbar" %>
+      
+      <main class="w-5/6 p-4 bg-rose-300 flex-grow">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

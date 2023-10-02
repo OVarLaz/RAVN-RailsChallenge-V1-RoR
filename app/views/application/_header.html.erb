@@ -1,0 +1,11 @@
+<header class="bg-slate-500 flex justify-between p-4 sticky top-0 h-20 items-center">
+      <div>
+        logo
+      </div>
+      <div>
+        <%= button_to "logout", destroy_user_session_path, method: :delete%>
+      </div>
+      <div class="md:hidden">
+        ☰
+      </div>
+    </header>

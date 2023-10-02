@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  layout 'sidebar'
   before_action :find_by_id, only: %i[show edit update destroy]
 
   def index
