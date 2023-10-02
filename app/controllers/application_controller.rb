@@ -5,8 +5,6 @@ class ApplicationController < ActionController::Base
 
   # handle redirect with devise gem
   def after_sign_in_path_for(_resource)
-    return users_path if current_user.admin?
-
-    pokemons_path
+    root_path
   end
 end
