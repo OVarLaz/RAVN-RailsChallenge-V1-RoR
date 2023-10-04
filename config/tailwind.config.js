@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Mooli", ...defaultTheme.fontFamily.sans],
+        // sans: "Quicksand, sans-serif",
       },
     },
   },

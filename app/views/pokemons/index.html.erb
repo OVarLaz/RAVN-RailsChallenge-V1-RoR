@@ -1,19 +1,35 @@
-<h1>Pokemons</h1>
+<div class="flex flex-row place-content-between">
+  <h1>Pokemons!</h1>
 
-<%= link_to "Add Pokemon", new_pokemon_path %>
-
-<table>
-  <tr>
-    <th>i</th>
-    <th>Pokemon</th>
-    <th>Type</th>
-  </tr>
-    <% @pokemons.each do |pokemon| %>
-  <tr>
-    
-    <td><%= pokemon.id %></td>
-    <td><%= link_to pokemon.name, pokemon %></td>
-    <td><%= pokemon.element_type %></td>
-  </tr>
-  <% end %>
+  <%= link_to "Add Pokemon", new_pokemon_path, options: { class: "h-5 w-5
+  text-purple-800" } %>
+</div>
+<div class="relative overflow-x-auto">
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <th scope="col" class="px-6 py-3">i</th>
+        <th scope="col" class="px-6 py-3">Pokemon</th>
+        <th scope="col" class="px-6 py-3">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @pokemons.each do |pokemon| %>
+      <tr
+        class="m-2 bg-white border-b dark:bg-gray-400 dark:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600"
+      >
+        <td class="px-6 py-4"><%= pokemon.id %></td>
+        <td
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          <%= link_to pokemon.name, pokemon %>
+        </td>
+        <td class="px-6 py-4"><%= pokemon.element_type %></td>
+      </tr>
+      <% end %>
+    </tbody>
   </table>
+</div>

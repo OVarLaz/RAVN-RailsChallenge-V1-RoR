@@ -1,9 +1,40 @@
-<nav class="bg-slate-400 w-1/6 md:flex flex-col hidden justify-between p-4 text-center sticky top-20 h-[calc(100vh-80px)]">
-        <div>
-          right sidebar TOP
-        </div>
-        <div>
-        right sidebar bottom
-          
-        </div>
-      </nav>
+<nav
+  class="bg-white border-r border-gray-300 w-1/5 md:flex flex-col hidden justify-between p-4 text-center sticky top-60 h-[calc(100vh-80px)]"
+>
+  <div>
+    <div class="nav-item">
+      <a
+        class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
+        href="/"
+      >
+        <%= heroicon "eye", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">Overview</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a
+        class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
+        href="/my-pokemons"
+      >
+        <%= heroicon "chat-bubble-bottom-center", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">My Pokemons</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a
+        class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
+        href="/pokemons"
+      >
+        <%= heroicon "chat-bubble-left-right", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">Pokemons</span>
+      </a>
+    </div>
+  </div>
+  <div>
+    <div class="nav-item">
+      <a
+        class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
+        href="/users"
+      >
+        <%= heroicon "user-group", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">Trainers</span>
+      </a>
+    </div>
+  </div>
+</nav>
