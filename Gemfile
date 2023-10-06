@@ -79,3 +79,9 @@ gem "pundit", "~> 2.3"
 gem "tailwindcss-rails", "~> 2.0"
 
 gem "heroicon"
+
+gem "rubycritic", "~> 4.8"
+
+gem "traceroute", "~> 0.8.1"
+
+gem "brakeman", "~> 6.0"
