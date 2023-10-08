@@ -85,3 +85,5 @@ gem "rubycritic", "~> 4.8"
 gem "traceroute", "~> 0.8.1"
 
 gem "brakeman", "~> 6.0"
+
+gem "mailcatcher"
