@@ -22,4 +22,11 @@ class User < ApplicationRecord
   def add_pokemon(new_pokemon_id:)
     UserPokemon.create(user_id: id, pokemon_id: new_pokemon_id)
   end
+
+  def caught_last_seven_days?
+    last_caught_pokemon = user_pokemons.last
+    return false if last_caught_pokemon.nil?
+
+    Time.now - 7.days < last_caught_pokemon.created_at
+  end
 end
