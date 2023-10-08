@@ -1,8 +1,10 @@
 <div class="flex flex-row place-content-between">
   <h1>Pokemons!</h1>
 
-  <%= link_to "Add Pokemon", new_pokemon_path, options: { class: "h-5 w-5
-  text-purple-800" } %>
+  <% if current_user.role == "admin" %>
+    <%= link_to "Add Pokemon", new_pokemon_path, options: { class: "h-5 w-5
+    text-purple-800" } %>
+  <% end %>
 </div>
 <div class="relative overflow-x-auto">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">

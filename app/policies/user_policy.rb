@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class PokemonPolicy
+class UserPolicy
   attr_reader :user, :record
 
   def initialize(user, record)
@@ -9,7 +9,7 @@ class PokemonPolicy
   end
 
   def index?
-    user.admin? || user.trainer?
+    user.admin?
   end
 
   def create?

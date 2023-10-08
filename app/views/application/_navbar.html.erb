@@ -28,13 +28,15 @@
     </div>
   </div>
   <div>
-    <div class="nav-item">
-      <a
-        class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
-        href="/users"
-      >
-        <%= heroicon "user-group", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">Trainers</span>
-      </a>
-    </div>
+    <% if current_user.role == "admin" %>
+      <div class="nav-item">
+        <a
+          class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
+          href="/users"
+        >
+          <%= heroicon "user-group", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">Trainers</span>
+        </a>
+      </div>
+    <% end %>
   </div>
 </nav>

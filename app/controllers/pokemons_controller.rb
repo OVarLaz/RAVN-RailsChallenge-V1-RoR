@@ -15,7 +15,7 @@ class PokemonsController < ApplicationController
 
   def create
     @pokemon = Pokemon.new(pokemon_params)
-
+    authorize @pokemon
     if @pokemon.save
       redirect_to @pokemon
     else
@@ -26,6 +26,7 @@ class PokemonsController < ApplicationController
   def edit; end
 
   def update
+    authorize @pokemon
     if @pokemon.update(pokemon_params)
       redirect_to @pokemon
     else
@@ -34,6 +35,7 @@ class PokemonsController < ApplicationController
   end
 
   def destroy
+    authorize @pokemon
     @pokemon.destroy
 
     redirect_to pokemons_path, status: :see_other
