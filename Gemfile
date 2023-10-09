@@ -87,3 +87,5 @@ gem "traceroute", "~> 0.8.1"
 gem "brakeman", "~> 6.0"
 
 gem "mailcatcher"
+
+gem "sidekiq", "~> 7.1"

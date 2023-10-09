@@ -1,3 +1,4 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
   devise_for :users
 
@@ -16,4 +17,6 @@ Rails.application.routes.draw do
   post '/add-pokemon', to: 'users#add_pokemon'
   post '/remove-pokemon', to: 'users#remove_pokemon'
   get '/caught_pokemon', to: 'users#caught_pokemon'
+
+  mount Sidekiq::Web => '/sidekiq'
 end
