@@ -4,6 +4,13 @@
   <%= link_to "Add Trainee", new_user_path %>
 </div>
 
+<div>
+  <%= form_tag(users_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search])%>
+    <%= submit_tag ("Search") %>
+  <% end %>
+</div>
+
 <div class="relative overflow-x-auto">
   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead
@@ -11,7 +18,7 @@
     >
       <tr>
         <th scope="col" class="px-6 py-3">i</th>
-        <th scope="col" class="px-6 py-3">Name</th>
+        <th scope="col" class="px-6 py-3"><%= link_to "Name", :sort => "name"%></th>
       </tr>
     </thead>
     <tbody>

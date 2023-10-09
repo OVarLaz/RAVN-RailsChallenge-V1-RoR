@@ -3,13 +3,17 @@ class UsersController < ApplicationController
   before_action :find_by_id, only: %i[show edit update destroy]
 
   def index
-    @users = User.all
+    @users = if params[:search].present?
+               User.where('lower(name) LIKE ?',
+                          "%#{params[:search].downcase}%").order(params[:sort])
+             else
+               User.all.order(params[:sort])
+             end
     authorize @users
   end
 
   def show
     @user_pokemons = @user.pokemons
-    authorize @user_pokemons
   end
 
   def new
