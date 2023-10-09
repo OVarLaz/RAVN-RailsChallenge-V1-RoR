@@ -3,7 +3,12 @@ class PokemonsController < ApplicationController
   before_action :find_by_id, only: %i[show edit update destroy]
 
   def index
-    @pokemons = Pokemon.all
+    @pokemons = if params[:search].present?
+                  Pokemon.where('lower(name) LIKE ?',
+                                "%#{params[:search].downcase}%").order(params[:sort])
+                else
+                  Pokemon.all.order(params[:sort])
+                end
     authorize @pokemons
   end
 
