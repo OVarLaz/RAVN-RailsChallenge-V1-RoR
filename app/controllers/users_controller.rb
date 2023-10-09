@@ -46,6 +46,10 @@ class UsersController < ApplicationController
 
   def my_pokemons; end
 
+  def caught_pokemon
+    @pokemons = Pokemon.all
+  end
+
   def remove_pokemon
     current_user.remove_pokemon(id: params[:pokemon_id])
 

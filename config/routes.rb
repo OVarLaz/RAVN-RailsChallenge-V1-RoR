@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/my-pokemons', to: 'users#my_pokemons'
   post '/add-pokemon', to: 'users#add_pokemon'
   post '/remove-pokemon', to: 'users#remove_pokemon'
+  get '/caught_pokemon', to: 'users#caught_pokemon'
 end
