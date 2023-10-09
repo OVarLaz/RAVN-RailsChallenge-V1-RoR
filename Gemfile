@@ -89,3 +89,5 @@ gem "brakeman", "~> 6.0"
 gem "mailcatcher"
 
 gem "sidekiq", "~> 7.1"
+
+gem 'faker'
