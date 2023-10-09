@@ -9,6 +9,11 @@
   </div>
 
   <div>
+    <%= form.label :element_type %><br>
+    <%= form.select :element_type, options_for_select(Pokemon.element_types.map { |key, value| [key.humanize, key] }), {prompt: "Select Type of Element..."}, class: "form-control" %>
+  </div>
+
+  <div>
     <%= form.label :image %><br>
     <%= form.text_field :image %>
     <% pokemon.errors.full_messages_for(:image).each do |message| %>
