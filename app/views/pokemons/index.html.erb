@@ -1,7 +1,7 @@
-<div>
+<div class="">
   <%= form_tag(pokemons_path, method: :get) do %>
-    <%= text_field_tag(:search, params[:search])%>
-    <%= submit_tag ("Search") %>
+    <%= text_field_tag(:search, params[:search], class: 'w-1/2 text-gradient', placeholder: 'Search a pokemon') %>
+    <%= submit_tag("Search", class: 'text-gray-400') %>
   <% end %>
 </div>
 
