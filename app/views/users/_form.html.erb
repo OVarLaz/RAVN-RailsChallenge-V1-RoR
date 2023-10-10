@@ -2,7 +2,7 @@
 
   <div>
     <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'w-1/2 text-gradient' %>
     <% user.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -11,6 +11,6 @@
   
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: 'flex flex-row button-add p-3 items-center rounded-2xl text-white' %>
   </div>
 <% end %>

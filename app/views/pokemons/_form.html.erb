@@ -2,7 +2,7 @@
 
   <div>
     <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: 'w-1/2 text-gradient' %>
     <% pokemon.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -15,7 +15,7 @@
 
   <div>
     <%= form.label :image %><br>
-    <%= form.text_field :image %>
+    <%= form.text_field :image, class: 'w-1/2 text-gradient' %>
     <% pokemon.errors.full_messages_for(:image).each do |message| %>
       <div><%= message %></div>
     <% end %>
@@ -25,18 +25,18 @@
 
   <div>
     <%= form.label :main_technique %><br>
-    <%= form.text_field :main_technique %>
+    <%= form.text_field :main_technique, class: 'w-1/2 text-gradient' %>
   </div>
 
   <div>
     <%= form.label :description %><br>
-    <%= form.text_area :description %><br>
+    <%= form.text_area :description, class: 'w-1/2 h-36 text-gradient' %><br>
     <% pokemon.errors.full_messages_for(:description).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: 'flex flex-row button-add p-3 items-center rounded-2xl text-white' %>
   </div>
 <% end %>

@@ -1,13 +1,13 @@
-<h1><%= @pokemon.name %></h1>
+<h1 class="text-2xl"><%= @pokemon.name %></h1>
 
 
 
 <p><%= @pokemon.description %></p>
 
  <% if current_user.role == "admin" %>
-  <ul>
-    <li><%= link_to "Edit", edit_pokemon_path(@pokemon) %></li>
-    <li><%= link_to "Destroy", pokemon_path(@pokemon), data: {
+  <ul class="flex">
+    <li class="flex flex-row w-max button-add p-3 m-3 items-center rounded-2xl text-white"><%= link_to "Edit", edit_pokemon_path(@pokemon) %></li>
+    <li class="flex flex-row w-max button-add p-3 m-3 items-center rounded-2xl text-white"><%= link_to "Destroy", pokemon_path(@pokemon), data: {
                       turbo_method: :delete,
                       turbo_confirm: "Are you sure?"
                     } %></li>
