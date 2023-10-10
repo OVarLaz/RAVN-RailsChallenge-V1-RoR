@@ -1,41 +1,35 @@
+<%= stylesheet_link_tag 'sidebar' %>
+
 <nav
   class="bg-white border-r border-gray-300 w-1/5 md:flex flex-col hidden justify-between p-4 text-center sticky top-60 h-[calc(100vh-80px)]"
 >
   <div>
     <div class="nav-item">
-      <a
-        class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
-        href="/"
-      >
-        <%= heroicon "eye", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">Overview</span>
-      </a>
+      <%= link_to(root_path, class: "nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate #{current_class_by(path: root_path)}") do %>
+        <%= heroicon "eye", options: { class: "h-5 w-5 text-purple-800" } %>
+        <span class="px-1">Overview</span>
+      <% end %>
+    </div>
+    <div class="nav-item ">
+      <%= link_to(my_pokemons_path, class: "nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate #{current_class_by(path: my_pokemons_path)}") do %>
+        <%= heroicon "chat-bubble-bottom-center", options: { class: "h-5 w-5 text-purple-800" } %>
+        <span class="px-1">My Caught</span>
+      <% end %>
     </div>
     <div class="nav-item">
-      <a
-        class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
-        href="/my-pokemons"
-      >
-        <%= heroicon "chat-bubble-bottom-center", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">My Pokemons</span>
-      </a>
-    </div>
-    <div class="nav-item">
-      <a
-        class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
-        href="/pokemons"
-      >
-        <%= heroicon "chat-bubble-left-right", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">Pokemons</span>
-      </a>
+      <%= link_to(pokemons_path, class: "nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate #{current_class_by(path: pokemons_path)}") do %>
+        <%= heroicon "chat-bubble-left-right", options: { class: "h-5 w-5 text-purple-800" } %>
+        <span class="px-1">Pokemons</span>
+      <% end %>
     </div>
   </div>
   <div>
     <% if current_user.role == "admin" %>
       <div class="nav-item">
-        <a
-          class="nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate"
-          href="/users"
-        >
-          <%= heroicon "user-group", options: { class: "h-5 w-5 text-purple-800" } %></span><span class="px-1">Trainers</span>
-        </a>
+        <%= link_to(users_path, class: "nav-link p-6 flex text-gray-600 hover:text-purple-600 truncate #{current_class_by(path: users_path)}") do %>
+          <%= heroicon "user-group", options: { class: "h-5 w-5 text-purple-800" } %>
+          <span class="px-1">Trainers</span>
+        <% end %>
       </div>
     <% end %>
   </div>
