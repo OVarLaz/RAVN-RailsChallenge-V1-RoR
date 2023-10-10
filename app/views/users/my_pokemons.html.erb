@@ -1,8 +1,11 @@
 <div class="flex flex-row place-content-between">
-<h1>My pokemons</h1>
+<h1 class="py-6 text-2xl">My pokemons</h1>
 
 <%= turbo_frame_tag "caught_pokemon_modal" do %>
-  <%= link_to "Caught Pokemon", caught_pokemon_path, class: "underline" %>
+    <div class="flex flex-row button-add p-3 items-center rounded-2xl text-white"> 
+      <%= heroicon "puzzle-piece", options: { class: "h-5 w-5 text-white" } %>
+      <%= link_to "Catch it", caught_pokemon_path %>
+    </div>
 <% end %>
 
 </div>

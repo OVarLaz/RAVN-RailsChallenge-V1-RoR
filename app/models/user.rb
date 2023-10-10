@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :pokemons, through: :user_pokemons
 
   def recent_pokemons
-    pokemons.where('user_pokemons.created_at < ?', Time.now - 7.days)
+    pokemons.where('user_pokemons.created_at > ?', Time.now - 7.days)
   end
 
   def remove_pokemon(id:)

@@ -1,10 +1,15 @@
-<h1>
-  <%= heroicon "magnifying-glass", options: { class: "h-6 w-6" } %> hey <%=
-  current_user.name %>
+<h1 class="text-2xl flex flex-row py-6">
+  <%= heroicon "star", options: { class: "h-6 w-6" } %> hey <%=
+  current_user.name %>!
 </h1>
 
-<ul>
-  <% current_user.recent_pokemons.each do |pokemon| %>
-  <li><%= pokemon.name %></li>
-  <% end %>
-</ul>
+<% if current_user.recent_pokemons.size > 0%>
+<div>Well done! you have new pokemons this week:</div>
+  <ul>
+    <% current_user.recent_pokemons.each do |pokemon| %>
+    <li><%= pokemon.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <span>You have not caught new pokemons in the last week</span>
+<% end %>

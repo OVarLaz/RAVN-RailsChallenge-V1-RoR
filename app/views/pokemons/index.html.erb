@@ -1,16 +1,18 @@
-<div class="flex flex-row place-content-between">
-  <h1>Pokemons!</h1>
-
-  <% if current_user.role == "admin" %>
-    <%= link_to "Add Pokemon", new_pokemon_path, options: { class: "h-5 w-5
-    text-purple-800" } %>
-  <% end %>
-</div>
-
 <div>
   <%= form_tag(pokemons_path, method: :get) do %>
     <%= text_field_tag(:search, params[:search])%>
     <%= submit_tag ("Search") %>
+  <% end %>
+</div>
+
+<div class=" py-6 flex flex-row place-content-between">
+  <h1 class="text-2xl">Pokemons!</h1>
+
+  <% if current_user.role == "admin" %>
+    <div class="flex flex-row button-add p-3 items-center rounded-2xl text-white"> 
+      <%= heroicon "plus-circle", options: { class: "h-5 w-5 text-white" } %>
+      <%= link_to "Add Pokemon", new_pokemon_path %>
+    </div>
   <% end %>
 </div>
 

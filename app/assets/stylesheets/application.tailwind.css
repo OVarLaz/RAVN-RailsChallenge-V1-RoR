@@ -17,4 +17,13 @@
   html {
     font-family: "Mooli", system-ui, sans-serif;
   }
+  .button-add {
+    background: rgb(99, 10, 135);
+    background: linear-gradient(
+      0deg,
+      rgba(99, 10, 135, 1) 0%,
+      rgba(121, 9, 84, 1) 49%,
+      rgba(255, 0, 127, 0.45284051120448177) 87%
+    );
+  }
 }
