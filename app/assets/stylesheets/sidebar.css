@@ -1,11 +1,13 @@
 .nav-link.active {
   background: rgb(2, 0, 36);
+  background: rgb(17, 3, 45);
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
+    rgba(17, 3, 45, 1) 0%,
     rgba(121, 9, 84, 1) 38%,
-    rgba(0, 212, 255, 0.45284051120448177) 100%
+    rgba(255, 0, 127, 0.45284051120448177) 87%
   );
   color: white;
   border-radius: 0% 30px 30px 0%;
+  margin: 0.5px;
 }
