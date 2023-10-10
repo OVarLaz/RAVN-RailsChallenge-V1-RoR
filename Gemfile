@@ -91,3 +91,5 @@ gem "mailcatcher"
 gem "sidekiq", "~> 7.1"
 
 gem 'faker'
+
+gem "will_paginate", "~> 4.0"

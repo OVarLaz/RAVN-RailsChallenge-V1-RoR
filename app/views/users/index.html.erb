@@ -36,4 +36,18 @@
       <% end %>
     </tbody>
   </table>
+  <div class="text-center my-4">
+    <div role="navigation" aria-label="Pagination" class="px-3 py-2 mx-2 text-gray-700 no-underline bg-white rounded-lg">
+      <div class="flickr_pagination">
+        <div class="py-4">
+          <%= page_entries_info(@users) %>
+        </div>
+        <div class="">
+          <ul class="pagination flex text-center">
+            <li class="disabled"> <%= will_paginate(@users,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0) %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

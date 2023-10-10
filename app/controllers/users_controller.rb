@@ -5,9 +5,9 @@ class UsersController < ApplicationController
   def index
     @users = if params[:search].present?
                User.where('lower(name) LIKE ?',
-                          "%#{params[:search].downcase}%").order(params[:sort])
+                          "%#{params[:search].downcase}%").order(params[:sort]).paginate(page: params[:page], per_page: 10)
              else
-               User.all.order(params[:sort])
+               User.all.order(params[:sort]).paginate(page: params[:page], per_page: 10)
              end
     authorize @users
   end
