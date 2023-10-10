@@ -32,3 +32,10 @@ Things you may want to cover:
 redis-server
 
 bundle exec sidekiq
+
+
+# Demo
+
+<img width="1506" alt="image" src="https://github.com/OVarLaz/RAVN-RailsChallenge-V1-RoR/assets/12819313/5614fe4a-40ac-4e72-a092-5a14fdf0fcc3">
+
+
