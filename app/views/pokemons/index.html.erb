@@ -23,6 +23,7 @@
     >
       <tr>
         <th scope="col" class="px-6 py-3">i</th>
+        <th scope="col" class="px-6 py-3">img</th>
         <th scope="col" class="px-6 py-3"><%= link_to "Pokemon Name", :sort => "name"%></th>
         <th scope="col" class="px-6 py-3"><%= link_to "Type", :sort => "element_type"%></th>
       </tr>
@@ -33,6 +34,7 @@
         class="m-2 bg-white border-b dark:bg-gray-400 dark:border-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600"
       >
         <td class="px-6 py-4"><%= pokemon.id %></td>
+        <td class="px-6 py-4"><%= image_tag(pokemon.image, size: "50x50", alt: pokemon.name) %></td>
         <td
           scope="row"
           class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"

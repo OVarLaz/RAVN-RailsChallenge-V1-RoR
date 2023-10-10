@@ -2,6 +2,8 @@
 
 
 
+<p>TYPE: <%= @pokemon.element_type %></p>
+<p>TECHNIQUE: <%= @pokemon.main_technique %></p>
 <p><%= @pokemon.description %></p>
 
  <% if current_user.role == "admin" %>
